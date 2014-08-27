@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: candleGroup.ma
-//Last modified: Wed, Aug 27, 2014 04:10:16 PM
+//Last modified: Wed, Aug 27, 2014 04:52:20 PM
 //Codeset: 1252
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -14,8 +14,8 @@ fileInfo "osv" "Microsoft Windows 8 Enterprise Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.40075374165435251 1.9820556258573743 -3.4314679571282056 ;
-	setAttr ".r" -type "double3" -30.338352729468859 175.39999999990224 0 ;
+	setAttr ".t" -type "double3" 0.75359686525561353 1.8702661215490524 -3.4491843278691454 ;
+	setAttr ".r" -type "double3" -28.538352729466226 169.79999999990039 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
@@ -803,7 +803,7 @@ createNode lightLinker -s -n "lightLinker1";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	setAttr ".cdl" 2;
+	setAttr ".cdl" 1;
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 3 ".dli";
 createNode displayLayer -n "defaultLayer";
@@ -1076,9 +1076,8 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "HiResCandleGroup.di" "pCube12.do";
+connectAttr "LoResCandleGroup.di" "pCube22.do";
 connectAttr "groupId1.id" "pCube22Shape.iog.og[0].gid";
 connectAttr "lambert2SG.mwc" "pCube22Shape.iog.og[0].gco";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
