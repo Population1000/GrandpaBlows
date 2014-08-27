@@ -1,21 +1,31 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+=============== 
+Unity generated
+===============
+Temp/
+Library/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+=====================================
+Visual Studio / MonoDevelop generated
+=====================================
+ExportedObj/
+obj/
+*.svd
+*.userprefs
+/*.csproj
+*.pidb
+*.suo
+/*.sln
+*.user
+*.unityproj
+*.booproj
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+============
+OS generated
+============
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
