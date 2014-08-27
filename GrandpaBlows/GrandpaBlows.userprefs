@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\OpenDiveSensor.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HeadRotator.cs">
     <Files>
-      <File FileName="Assets\Scripts\OpenDiveSensor.cs" Line="24" Column="17" />
+      <File FileName="Assets\Scripts\HeadRotator.cs" Line="25" Column="11" />
+      <File FileName="Assets\Scripts\OpenDiveSensor.cs" Line="109" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
