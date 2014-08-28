@@ -14,7 +14,13 @@ public class BlowOut : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider c){
-		if (c.tag == "Flame")
-						c.gameObject.SetActive (false);
+		if (c.tag == "Flame") {
+			foreach(Transform child in c.transform){
+				if(child.name == "Flame")
+					child.gameObject.SetActive(false);
+				else
+					child.gameObject.SetActive(true);
+			}
+				}
 	}
 }
