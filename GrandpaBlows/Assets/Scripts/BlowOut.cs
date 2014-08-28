@@ -14,7 +14,6 @@ public class BlowOut : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider c){
-		Debug.Log ("Collided");
 		if (c.tag == "Flame") {
 			foreach(Transform child in c.transform){
 				if(child.name == "Flame")
