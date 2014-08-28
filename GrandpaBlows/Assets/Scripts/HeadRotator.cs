@@ -20,11 +20,13 @@ public class HeadRotator : MonoBehaviour {
 		rot.z = (-1)*Input.gyro.attitude.y;
 		rot.w = Input.gyro.attitude.x;
 */
-		
+		/*
 		rot.x = -Input.gyro.attitude.eulerAngles.y;
 		rot.y = Input.gyro.attitude.eulerAngles.x;
 		rot.z = Input.gyro.attitude.eulerAngles.z;
 		transform.eulerAngles = rot;
+		*/
+		transform.rotation = Input.gyro.attitude;
 	
 	}
 }
