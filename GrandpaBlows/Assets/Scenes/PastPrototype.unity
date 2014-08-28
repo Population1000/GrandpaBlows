@@ -1458,9 +1458,9 @@ GameObject:
   - 4: {fileID: 1637870572}
   - 33: {fileID: 1637870571}
   - 23: {fileID: 1637870570}
-  - 114: {fileID: 1637870574}
   - 64: {fileID: 1637870573}
   - 54: {fileID: 1637870569}
+  - 114: {fileID: 1637870574}
   m_Layer: 0
   m_Name: breathCone
   m_TagString: Untagged
@@ -1535,7 +1535,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7eda3e8295cbd72448a2d9b8e643e934, type: 3}
 --- !u!114 &1637870574
 MonoBehaviour:
@@ -1545,9 +1545,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1637870568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd034cb49fb504a438ea7c23936928b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f40a6153fb3bb34ab12487e579bc1a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grandpa: {fileID: 0}
+  blow: {fileID: 0}
+  scaleRate: {x: .00999999978, y: 0, z: .00999999978}
+  mouseDown: 0
+  blowing: 0
 --- !u!1 &1859169453
 GameObject:
   m_ObjectHideFlags: 0
