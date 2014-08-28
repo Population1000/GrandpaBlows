@@ -100,7 +100,7 @@ Light:
   serializedVersion: 3
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .0700000003
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1545,12 +1545,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1637870568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f40a6153fb3bb34ab12487e579bc1a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 90e7a3b7c8fb72342a41538a35fcfdf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   grandpa: {fileID: 0}
-  blow: {fileID: 0}
-  scaleRate: {x: .00999999978, y: 0, z: .00999999978}
+  gameLight: {fileID: 181233818}
+  inhaleRate: {x: 0, y: .00999999978, z: .00999999978}
+  exhaleRate: {x: 0, y: .0199999996, z: .0199999996}
+  blowLength: 2.20000005
+  maximumBlow: 1.5
+  minimumBlow: .00999999978
+  numCandles: 100
   mouseDown: 0
   blowing: 0
 --- !u!1 &1859169453
