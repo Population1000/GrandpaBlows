@@ -18,9 +18,10 @@ public class reticleScript : MonoBehaviour {
 //		transform.Rotate (Vector3.right * 270);
 //		transform.position = grandpa.transform.position;
 //		transform.Translate (Vector3.down * 1);
-		if (Input.GetMouseButtonDown (0))
+		if (Input.GetMouseButtonDown (0)) {
 			mouseDown = true;
 			blowing = false;
+		}
 		if (Input.GetMouseButtonUp (0)) {
 			blowing = true;
 			mouseDown = false;
