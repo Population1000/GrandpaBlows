@@ -36,8 +36,18 @@ public class reticleScript : MonoBehaviour {
 			blowing = false;
 			transform.localScale = new Vector3 (0.01f, 0.00000001f, 0.01f);
 		}
-		if (blowing) {
+	}
 
-		}
+	void OnTriggerEnter(Collider other)
+	{
+		if(other.CompareTag("Flame"))
+			if(blowing)
+				Destroy(other.gameObject);
+	}
+	void OnTriggerStay(Collider other)
+	{
+		if(other.CompareTag("Flame"))
+			if(blowing)
+				Destroy(other.gameObject);
 	}
 }
