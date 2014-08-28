@@ -40,12 +40,12 @@ public class reticleScript : MonoBehaviour {
 	{
 		if(other.CompareTag("Flame"))
 			if(blowing)
-				Destroy(other.gameObject);
+				other.gameObject.SetActive(false);
 	}
 	void OnTriggerStay(Collider other)
 	{
 		if(other.CompareTag("Flame"))
 			if(blowing)
-				Destroy(other.gameObject);
+				other.gameObject.SetActive(false);
 	}
 }
