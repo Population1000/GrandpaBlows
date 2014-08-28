@@ -6,7 +6,7 @@ public class reticleScript : MonoBehaviour {
 	public GameObject grandpa;
 	public Vector3 inhaleRate = new Vector3(0.0f,0.01f,0.01f);
 	public Vector3 exhaleRate = new Vector3(0.0f,0.02f,0.02f);
-	public float breathLength = 0.85f;
+	public float blowLength = 2.2f;
 	public bool mouseDown = false;
 	public bool blowing = false;
 	// Use this for initialization
@@ -16,13 +16,9 @@ public class reticleScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-//		transform.rotation = grandpa.transform.rotation;
-//		transform.Rotate (Vector3.right * 270);
-//		transform.position = grandpa.transform.position;
-//		transform.Translate (Vector3.down * 1);
 		if (Input.GetMouseButtonDown (0)) {
-			mouseDown = true;
-			blowing = false;
+			if(!blowing)
+				mouseDown = true;
 		}
 		if (Input.GetMouseButtonUp (0)) {
 			blowing = true;
@@ -32,22 +28,26 @@ public class reticleScript : MonoBehaviour {
 			transform.localScale = transform.localScale + inhaleRate;
 		else
 			transform.localScale = transform.localScale - exhaleRate;
+		if (transform.localScale.y > 1.5f) {
+			transform.localScale = new Vector3(blowLength, 1.5f, 1.5f);
+			//GAME OVER!
+		}
 		if (transform.localScale.y < .01f) {
 			blowing = false;
-			transform.localScale = new Vector3 (breathLength, 0.011f, 0.011f);
+			transform.localScale = new Vector3 (blowLength, 0.011f, 0.011f);
 		}
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.CompareTag ("Flame"))
-			if (blowing)
-				other.gameObject.setActive(false);
+		if(other.CompareTag("Flame"))
+			if(blowing)
+				other.gameObject.SetActive(false);
 	}
 	void OnTriggerStay(Collider other)
 	{
 		if(other.CompareTag("Flame"))
 			if(blowing)
-				other.gameObject.setActive(false);
+				other.gameObject.SetActive(false);
 	}
 }
